@@ -2,12 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { XMarkIcon, ExclamationTriangleIcon, CloudArrowDownIcon, CodeBracketIcon, Cog6ToothIcon, ClipboardDocumentCheckIcon, ClipboardDocumentIcon, ArrowPathIcon, CpuChipIcon, PlusIcon, PencilIcon, TrashIcon } from '@heroicons/react/24/solid';
-import { Project, Memory } from '../../types';
+import { Project, Memory } from '../types';
 import { CodeBlock } from '../components/ui/CodeBlock';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { supabase } from '../supabaseClient';
 import { useAuth } from '../contexts/AuthContext';
-import { getMemoriesForUser, saveMemory, deleteMemory, updateMemory } from '../../services/databaseService';
+import { getMemoriesForUser, saveMemory, deleteMemory, updateMemory } from '../services/databaseService';
 
 interface ProjectSettingsModalProps {
   isOpen: boolean;
